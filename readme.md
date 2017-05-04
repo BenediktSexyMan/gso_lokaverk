@@ -1,0 +1,1 @@
+# GSÖ Lokaverkefni 2017
