@@ -46,10 +46,10 @@ CREATE TABLE lag
 (
 	ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nafn VARCHAR(50) NOT NULL,
-    Lengd TIME NOT NULL,
+    Lengd DOUBLE(5,2) NOT NULL,  /*Í mínútum: 5.50 eru fimm mínótur og 50 sekúndur*/
     tegund INT NOT NULL,
     flytjandi INT NOT NULL,
-    einkunn DOUBLE(2, 1),
+    einkunn DOUBLE(3, 1),
     diskur INT NOT NULL,
     FOREIGN KEY (tegund) REFERENCES tegund(ID),
     FOREIGN KEY (flytjandi) REFERENCES flytjandi(ID),
@@ -71,6 +71,7 @@ CREATE TABLE lag_semj
     
 );
 
+/*  Röð sem ætti að droppa í
 DROP TABLE lag_semj;
 DROP TABLE semjandi;
 DROP TABLE lag;
@@ -79,3 +80,4 @@ DROP TABLE diskur;
 DROP TABLE flokkur;
 DROP TABLE tegund;
 DROP TABLE utgefandi;
+*/
